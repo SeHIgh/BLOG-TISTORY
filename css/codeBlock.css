@@ -1,0 +1,9 @@
+/* 코드 블럭 */
+#article-view .codeblock {
+    font-size: 14px;
+    padding: 20px;
+    font-family: SF Mono, Menlo, Consolas, Monaco, monospace;
+    border: solid 1px #ebebeb;
+    line-height: 1.71;
+    overflow: auto;
+  }
