@@ -1,9 +1,179 @@
-/* 코드 블럭 */
-#article-view .codeblock {
+/* 코드블럭 꾸미기 (MAC 형태) */
+pre {
+    position: relative;
+}
+
+pre::after {
+    content: attr(data-ke-language);
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: #cfd2d1;
+    font-size: 12px;
+}
+
+.hljs {
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 !important;
     font-size: 14px;
-    padding: 20px;
-    font-family: SF Mono, Menlo, Consolas, Monaco, monospace;
-    border: solid 1px #ebebeb;
-    line-height: 1.71;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgb(0 0 0 / 40%);
+    color: #cfd2d1;
+    background-color: #343131;
+    font-family: Menlo, Courier, monospace;
+}
+
+.hljs .line {
+    counter-increment: line-idx;
+    line-height: 1.5;
+}
+
+.hljs .line:hover {
+    background-color: #262830;
+}
+
+.hljs .line:hover::before {
+    color: #cfd2d1;
+}
+
+.hljs .line::before {
+    content: counter(line-idx);
+    width: 24px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 16px;
+    font-size: 0.8rem;
+    color: #747a7a;
+}
+
+.hljs .code-header {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    background-color: #434041;
+    border-radius: 8px 8px 0 0;
+}
+
+.hljs .code-header .btn {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+
+.hljs .code-header .btn.red {
+    background-color: #f5655b;
+}
+
+.hljs .code-header .btn.yellow {
+    background-color: #f6bd3b;
+}
+
+.hljs .code-header .btn.green {
+    background-color: #43c645;
+}
+
+.hljs .code-body {
+    max-height: 600px;
+    margin: 32px 8px;
     overflow: auto;
-  }
+}
+
+.hljs .code-body::-webkit-scrollbar {
+    width: 12px;
+}
+
+.hljs .code-body::-webkit-scrollbar-thumb {
+    background-color: rgb(1 2 3 / 80%);
+    border-radius: 4px;
+}
+
+.hljs .code-body::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.hljs .copy-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px 0;
+    width: 64px;
+    border-radius: 4px;
+    margin-left: auto;
+    transition: 0.2s background-color;
+}
+
+.hljs .copy-btn:hover {
+    background-color: #555152;
+}
+
+/* monokai theme */
+.hljs {
+    background: #272822;
+    color: #ddd
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-name,
+.hljs-number,
+.hljs-selector-tag,
+.hljs-strong,
+.hljs-tag {
+    color: #f92672
+}
+
+.hljs-code {
+    color: #66d9ef
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-link,
+.hljs-regexp,
+.hljs-symbol {
+    color: #bf79db
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-bullet,
+.hljs-emphasis,
+.hljs-section,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-string,
+.hljs-subst,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-title,
+.hljs-type,
+.hljs-variable {
+    color: #a6e22e
+}
+
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+    color: #fff
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta,
+.hljs-quote {
+    color: #75715e
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-literal,
+.hljs-section,
+.hljs-selector-id,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-type {
+    font-weight: 700
+}

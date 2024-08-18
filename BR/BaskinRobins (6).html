@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 12px;
+        }
+        body{
+            width: 100%;
+            min-width: 500px;
+            background-color: white;
+        }
+        .nav{
+            width: 100%;
+            height: 90px;
+            background-color: #F986BD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nav_wrap1{
+            width: 80%;
+            height: auto;
+            min-width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #nav_wrap2{
+            width: auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            
+        }
+        .nav_text{
+            width: auto;
+            height: 63px;
+
+            white-space: nowrap;
+
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            align-items: center;
+
+            color: white;
+        }
+        #logo_img{
+            padding-right: 15%;
+        }
+
+        @media screen and (max-width:800px){
+            #logo_img{
+                padding-right:0;
+            }
+        }
+
+        #search_box{
+            width: 230px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .page_menu{
+            width: auto;
+            height: auto;
+        }
+        .page_menu_text{
+            display: flex;
+            justify-content: center;
+        }
+        .page_menu_text>li{
+            white-space: nowrap;
+            padding: 0 20px 0 20px;
+            color: #F986BD;
+            border-right: 1px solid #F986BD;
+        }
+        .page_menu_text>:first-child{
+            padding-left: 0;
+        }
+        .page_menu_text>:last-child{
+            padding-right: 0;
+            border: none;
+        }
+        #monthly_taste{
+            
+        }
+        #monthly_taste>h1{
+            font-size: 90px;
+            color: #F986BD;
+            text-align: center;
+        }
+        #main_page{
+            width: fit-content;
+            border: 0.1px solid #d1d1d1;
+
+            margin: 0 auto;
+        }
+        #main{
+            width: 1034px;
+        }
+        .main_text{
+            color: #444444;
+            text-align: center;
+        }
+        .main_text>:nth-child(1){
+            font-size: 25px;
+        }
+        .main_text>:nth-child(2){
+            font-size: 42px;
+        }
+        .main_text>:nth-child(3){
+            font-size: 17px;
+        }
+        .bottom{
+            width: 1034px;
+            margin: 0 auto;
+        }
+        .bottom_title{
+            font-size: 25px;
+            color: #444444;
+        }
+        .monthly_new{
+            width: 1074px;
+            height: 352;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .monthly_new>div{
+            width: 253px;
+            height: 253px   ;
+
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .monthly_new>div>img{
+            width: 100%;
+            height: 100%;
+        }
+        .taste_explantion{
+            width: 1034px;
+        }
+        .taste_explantion_img1{
+            width: 64px;
+            height: 64px;
+            text-align: center;
+        }
+        .taste_explantion_img2{
+            width: 64px;
+            height: 64px;
+            text-align: center;
+        }
+        .taste_explantion_ul{
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .taste_explantion_ul>li{
+            width: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .taste_explantion_ul>li>img{
+            width: 64px;
+            height: 64px;
+        }
+    </style> 
+</head>
+<body>
+    <div class="nav">
+        <div id="nav_wrap1">
+                <div id="nav_wrap2">
+                <a id="logo_img" href="https://www.baskinrobbins.co.kr/"><img src="logo.png" alt="로고"></a>
+            <ul class="nav_text">
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list.php?category=A">menu</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/play/event/list.php">BR paly</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/story/story.php">BR story</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/store/map.php">Delivery/Store</a></li>
+            </ul>
+            </div>
+        <div id="search_box">
+            <a href=""><img id="search1_img" src="search.png" alt="검색"></a>
+            <a href=""><img src="search2.png" alt="사람"></a>
+            </div>
+        </div>
+    </div>
+        <div class="content">
+        <div class="page_menu">
+            <ul class="page_menu_text">
+                <li><a href="https://www.baskinrobbins.co.kr/menu/fom.php">이달의 맛</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list.php?category=A">아이스크림</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list.php?category=F">프리팩</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list.php?category=B">아이스크림케이크</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list.php?category=E">디저트</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list_subcategory.php?category=C">음료</a></li>
+                <li><a href="https://www.baskinrobbins.co.kr/menu/list_subcategory.php?category=D">커피</a></li>
+            </ul>
+        </div>
+        <div id="monthly_taste">
+            <h1>
+                8월 이달의 맛
+            </h1>
+            <div id="main_page">
+                <div class="main_text">
+                    <p>Peach Pang Mango Pang</p>
+                    <p>피치 Pang 망고 Pang</p>
+                    <p>상큼한 피치 샤베트에 망고향이 팡팡 터지는 버블이 가득!</p>
+                </div>
+                    <div class="taste_explantion">
+                        <ul class="taste_explantion_ul">
+                            <li><img src="fruit1.png" alt="망고">망고</li>
+                            <li><img src="fruit2.png" alt="복숭아">복숭아</li>
+                        </ul>
+                    <!--<div class="taste_explantion_img1">
+                        <img src="fruit1.png" alt="망고">
+                        <p>망고</p>
+                    </div>
+                    <div class="taste_explantion_img2">
+                        <img src="fruit2.png" alt="복숭아">
+                        <p>복숭아</p>
+                    </div>-->
+                </div>
+            <img id="main" src="main.jpg" alt="메인">
+            </div>
+            <div class="bottom">
+            <p class="bottom_title">이달의 신제품</p>
+                <div class="monthly_new">
+                    <div><img src="bottom1.png" alt="신제품1"></div>
+                    <div><img src="bottom2.png" alt="신제품2"></div>
+                    <div><img src="bottom3.png" alt="신제품3"></div>
+                    <div><img src="bottom4.png" alt="신제품4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
